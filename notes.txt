@@ -1,0 +1,69 @@
+Conda:
+
+create end: conda create -n agentic-ai python=3.12
+
+run env: conda activate agentic-ai
+
+install aider: python -m pip install aider-install
+
+install aider-chat: python -m pip install -U aider-chat
+
+check aider version: aider --version
+> aider 0.86.2 (as of 27/07/2026)
+
+ensure ollama is installed, check using: ollama list
+> NAME             ID              SIZE      MODIFIED
+> llama3:latest    365c0bd3c000    4.7 GB    12 months ago
+
+pull a coding model: ollama pull qwen2.5-coder:32b
+> pulling manifest
+> pulling ac3d1ba8aa77: 100% ▕█████████████████████████████████████████████████████████ ▏  19 GB/ 19 GB  102 MB/s      0s
+> verifying sha256 digest
+> writing manifest
+> success
+
+check model: ollama list
+> NAME                 ID              SIZE      MODIFIED
+> qwen2.5-coder:32b    b92d6a0bd47e    19 GB     25 seconds ago
+> llama3:latest        365c0bd3c000    4.7 GB    12 months ago
+
+
+RESTART CONDA TERMINAL
+
+Test that Ollama is working
+run: conda activate agentic-ai
+run: cd Downloads/local_agentic_ai/
+run: ollama run qwen2.5-coder:32b
+
+a chat window should start, try sending a messge, e.g.: >>> are you working?
+response: Yes, I'm here and ready to help! How can I assist you today?
+
+THIS IS NOT AGENTIC AI, JUST TESTING LLM IS RUNNING, agentic AI handled by Aider.
+
+You
+ |
+ v
+Aider  <--- agent (reads files, edits files, runs commands)
+ |
+ v
+Ollama <--- LLM (generates reasoning/code)
+ |
+ v
+Qwen2.5-Coder
+
+CLOSE ALL TERMINALS
+
+open conda terminal
+
+run: conda activate agentic-ai
+run: set OLLAMA_API_BASE=http://localhost:11434
+run to make sure OLLAMA_API_BASE is set: echo %OLLAMA_API_BASE%
+> http://localhost:11434
+run: cd Downloads/local_agentic_ai/
+start aider: aider --model ollama/qwen2.5-coder:32b
+> Aider v0.86.2
+> Model: ollama/qwen2.5-coder:32b with diff edit format
+> Git repo: .git with 0 files
+> Repo-map: using 4096.0 tokens, auto refresh
+
+PERMENANTLY SET OLLAMA API USING: setx OLLAMA_API_BASE http://localhost:11434
