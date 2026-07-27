@@ -1,12 +1,5 @@
-# Aider configuration
-
 model: ollama/qwen2.5-coder:32b
+openai-api-base: http://localhost:11434
 
-# Keep Git control with the user
 auto-commits: false
-
-# Show useful explanations with changes
-verbose: true
-
-# Keep changes reviewable
 edit-format: diff
