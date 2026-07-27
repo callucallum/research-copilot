@@ -1,1 +1,5 @@
+# Aider
 .aider*
+
+# Local environments
+.env
