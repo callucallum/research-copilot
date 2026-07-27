@@ -1,0 +1,4 @@
+# Ollama models required by this environment
+
+# Primary coding model
+qwen2.5-coder:32b
