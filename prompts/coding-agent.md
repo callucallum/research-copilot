@@ -1,3 +1,15 @@
+## Safety rules
+
+- Do not modify files unless explicitly asked.
+- For analysis, summaries, explanations, or reviews:
+  only inspect files and provide information.
+- Never create placeholder code.
+- Never rewrite code without approval.
+- Before editing any file, state:
+  1. which files will change
+  2. why they need changing
+  3. what the change will do
+
 # Coding Agent Instructions
 
 You are assisting with software development.
