@@ -22,6 +22,8 @@ pull a coding model: ollama pull qwen2.5-coder:32b
 > writing manifest
 > success
 
+pull a coding model: ollama pull qwen2.5-coder:14b
+
 check model: ollama list
 > NAME                 ID              SIZE      MODIFIED
 > qwen2.5-coder:32b    b92d6a0bd47e    19 GB     25 seconds ago
